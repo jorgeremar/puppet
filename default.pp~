@@ -15,18 +15,18 @@ class {'apache':}
 class config {
   if ($::osfamily == 'Debian') {
     file{'/etc/apache2/sites-enabled/myvhost.conf':
-      source => '///home/jorge/p5-puppet/files/myvhost.conf'
+      source => '///home/jorge/master/IntegracionContinua/p5-puppet/sesion10-puppet/files/myvhost.conf'
     }
   }
   if ($::osfamily == 'RedHat') {
     file{'/etc/httpd/conf.d/myvhost.conf':
-      source => '///home/jorge/p5-puppet/files/myvhost.conf'
+      source => '///home/jorge/master/IntegracionContinua/p5-puppet/sesion10-puppet/files/myvhost.conf'
     }
   }
 }
 
 file {'/var/www/html/index.html':
-  source => '///home/jorge/p5-puppet/files/index.html'
+  source => '///home/jorge/master/IntegracionContinua/p5-puppet/sesion10-puppet/files/index.html'
 }
 
 
